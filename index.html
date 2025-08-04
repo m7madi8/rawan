@@ -797,11 +797,51 @@
             padding: 3rem;
         }
 
-        .footer-content {
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            opacity: 0.7;
-        }
+                 .footer-content {
+             font-size: 0.8rem;
+             letter-spacing: 0.1em;
+             opacity: 0.7;
+         }
+
+         .footer-signature {
+             margin-top: 1rem;
+             padding-top: 1rem;
+             border-top: 1px solid rgba(255, 255, 255, 0.1);
+         }
+
+         .footer-signature p {
+             font-size: 0.75rem;
+             opacity: 0.6;
+             transition: all 0.3s ease;
+         }
+
+         .signature-link {
+             color: var(--accent-gold);
+             text-decoration: none;
+             font-weight: 500;
+             transition: all 0.3s ease;
+             position: relative;
+         }
+
+         .signature-link::after {
+             content: '';
+             position: absolute;
+             bottom: -2px;
+             left: 0;
+             width: 0;
+             height: 1px;
+             background: var(--accent-gold);
+             transition: width 0.3s ease;
+         }
+
+         .signature-link:hover::after {
+             width: 100%;
+         }
+
+         .signature-link:hover {
+             color: var(--white);
+             opacity: 1;
+         }
 
                  /* Responsive Design */
                    @media (max-width: 768px) {
@@ -1107,12 +1147,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 RAWAN. All rights reserved.</p>
-        </div>
-    </footer>
+         <!-- Footer -->
+     <footer class="footer">
+         <div class="footer-content">
+             <p>&copy; 2025 RAWAN. All rights reserved.</p>
+             <div class="footer-signature">
+                 <p>Designed & Developed by <a href="https://m7madi8.github.io/Mohammad/" target="_blank" class="signature-link">Mohammad Hroub</a></p>
+             </div>
+         </div>
+     </footer>
 
     <script>
         // Preloader
